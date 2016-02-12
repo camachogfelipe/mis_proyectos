@@ -1,0 +1,923 @@
+@charset "utf-8";
+/* CSS Document */
+/* Nombre del archivo: jcp.css */
+/* Descripción: Estilos globales */
+/* Fecha de creación: Abril de 2014 */
+/* Autor: Felipe Camacho */
+
+/*───────────────────────────────── Normalize*/
+a {text-decoration: none;} a:active, a:hover {outline: 0;} a:focus {outline: thin dotted;} abbr[title] {border-bottom: 1px dotted;} article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;} audio, canvas, video {display: inline-block;} audio:not([controls]) {display: none; height: 0;} b, strong {font-weight: bold;} body {margin: 0;} button, input, select, textarea {font-family: inherit; font-size: 100%; margin: 0;} button, input {line-height: normal;} button, select {text-transform: none;} button, html input[type="button"], input[type="reset"], input[type="submit"] {cursor: pointer; -webkit-appearance: button;} button[disabled], html input[disabled] {cursor: default;} button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0;} code, kbd, pre, samp {font-family: monospace, serif; font-size: 1em;} dfn {font-style: italic;} figure {margin: 0;} fieldset {border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;} legend {border: 0; padding: 0;} hr {box-sizing: content-box; height: 0; -moz-box-sizing: content-box;} html {font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;} h1 {font-size: 2em; margin: 0.67em 0;} img {border: 0;} input[type="checkbox"], input[type="radio"] {box-sizing: border-box; padding: 0;} input[type="search"] {box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; -webkit-appearance: textfield;} input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;} mark {background: #ff0; color: #000;} /*pre {white-space: pre-wrap;}*/ q {quotes: "\201C" "\201D" "\2018" "\2019";} small {font-size: 80%;} sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;} sup {top: -0.5em;} sub {bottom: -0.25em;} svg:not(:root), .ov {overflow: hidden;} table {border-spacing: 0; border-collapse: collapse;} textarea {overflow: auto; vertical-align: top;} [hidden] {display: none;} 
+/*── Add*/
+* {outline: none; tap-highlight-color: rgba(255, 255, 255, 0); -moz-tap-highlight-color: rgba(255, 255, 255, 0); -ms-tap-highlight-color: rgba(255, 255, 255, 0); -o-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+.cfx:after {clear: both; content: ""; display: block; font-size: 0; height: 0; visibility: hidden;}
+*html .cfx {zoom: 1;}
+*:first-child+html .cfx {zoom: 1;}
+::selection {background: #F69220; color: #fff; text-shadow: none;}
+::-moz-selection {background: #424242; color: #fff; text-shadow: none;}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 10px;
+	color: #961D81;
+	font-family: Museo500;
+	text-transform: uppercase;
+	border-bottom: 1px solid #2DAAE1;
+	font-weight: bold;
+}
+
+.fechas h1, .fechas h2, .fechas h3, .fechas h4, .fechas h5, .fechas h6 {
+	padding: 10px;
+	margin: 10px 10px 0;
+	color: #474898;
+	font-family: Museo300;
+	text-transform: uppercase;
+	border-bottom: 1px solid #2DAAE1;
+	font-weight: bold;
+}
+
+.fl {float: left;} .fr {float: right;} p {padding: 5px 15px 5px 5px;}
+.mt { margin-top: 10px; }
+.ml { margin-left: 10px; }
+.mlm { margin-left: 3px; }
+.mr { margin-right: 10px; }
+.wm2 { width: 49%; margin: 0 0.5%; }
+.wmm { width: 24%; margin: 0 0.5%; }
+.wm5 { width: 19%; margin: 0 0.5%; }
+.wm7 { width: 13%; margin: 0 0.5%; }
+.pv { padding: 10px 0; }
+.pvm { padding: 5px 0; }
+.tac { text-align: center; }
+/*─────────────────────────────────/ Normalize*/
+
+/*───────────────────────────────── Fonts*/
+@font-face {font-family: 'Museo'; src: url('../fonts/museo/100/MuseoSans-100.eot'); src: url('../fonts/museo/100/MuseoSans-100.eot?#iefix') format('embedded-opentype'), url('../fonts/museo/100/MuseoSans-100.woff') format('woff'), url('../fonts/museo/100/MuseoSans-100.ttf') format('truetype'), url('../fonts/museo/100/MuseoSans-100.svg#MuseoSans-100') format('svg'); font-weight: normal; font-style: normal;}
+
+@font-face {font-family: 'Museo300'; src: url('../fonts/museo/300/MuseoSans-300.eot'); src: url('../fonts/museo/300/MuseoSans-300.eot?#iefix') format('embedded-opentype'), url('../fonts/museo/300/MuseoSans-300.woff') format('woff'), url('../fonts/museo/300/MuseoSans-300.ttf') format('truetype'), url('../fonts/museo/300/MuseoSans-300.svg#MuseoSans-300') format('svg'); font-weight: normal; font-style: normal;}
+
+@font-face {font-family: 'Museo500'; src: url('../fonts/museo/500/MuseoSans-500.eot'); src: url('../fonts/museo/500/MuseoSans-500.eot?#iefix') format('embedded-opentype'), url('../fonts/museo/500/MuseoSans-500.woff') format('woff'), url('../fonts/museo/500/MuseoSans-500.ttf') format('truetype'), url('../fonts/museo/500/MuseoSans-500.svg#MuseoSans-500') format('svg'); font-weight: normal; font-style: normal;}
+/*─────────────────────────────────/ Fonts*/
+
+/*─────────────────────────────────/ Site Styles*/
+body {
+	font-family: Museo;
+	font-size: medium;
+	color: #1C3434;
+}
+
+a {
+	color: white;
+}
+
+.resaltado {
+	background-color: #42CACA;
+	color: white;
+	padding: 3px 2px;
+}
+
+.caja {
+	border: 1px solid #42CACA;
+}
+
+.caja > span {
+	font-size: 14px;
+}
+
+.cuartosa {
+	margin-top: 85px;
+}
+
+.cuartosb {
+	margin-top: 160px;
+}
+
+.cuartos2 {
+	margin: 35px 0;
+}
+
+.semis {
+	margin-top: 176px;
+}
+
+.semis2 {
+	margin: 145px 0;
+}
+
+.final {
+	margin-top: 264px;
+	border: 1px solid #FFBF00;
+}
+
+.final .resaltado {
+	background-color: #FFBF00;
+	color: white;
+	padding: 3px 2px;
+}
+
+.tercer {
+	border: 1px solid #CD7F32;
+}
+
+.tercer .resaltado {
+	background-color: #CD7F32;
+	color: white;
+	padding: 3px 2px;
+}
+
+.final2 {
+	margin: 42px 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.text {
+	overflow: hidden;
+	line-height: 20px;
+	font:18px 'Museo';
+}
+
+.text2 {
+	overflow: hidden;
+	line-height: 20px;
+	font:14px 'Museo';
+}
+
+.text span { font-size: 14px; }
+
+table caption {
+	background-color: #F69220;
+	color: white;
+	font-weight: bold;
+}
+
+.header section, .footer section {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header, .footer {
+	background-color: #353535;
+	padding: 15px 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+}
+
+.body { margin-top: 84px; }
+
+.header #logo, .header nav {
+	float: left;
+}
+
+.header .header-redes {
+	float: right;
+	margin-top: 6px;
+}
+
+.header .header-redes {height:40px; overflow:hidden; width:129px;}
+.header .header-red {background:url(../images/header-redes-sp.png); float:left; height:40px; margin:0 0 0 3px; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; width:40px;}
+.header .header-red.red-fb {background-position:0 0;} .header .header-red.red-fb:hover {background-position:0 -40px;}
+.header .header-red.red-tw {background-position:-40px 0;} .header .header-red.red-tw:hover {background-position:-40px -40px;}
+.header .header-red.red-yt {background-position:-80px 0;} .header .header-red.red-yt:hover {background-position:-80px -40px;}
+
+.header nav {margin: 0 0 0 50px; padding:0; text-align:center; width:auto; }
+
+.header nav ul, .slide-jugadores { padding-left:0; }
+
+.header nav ul li, .slide-jugadores li {
+	display:inline-block;
+	list-style-type:none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.header nav ul li a, .footer a {
+	color:white;
+	font:18px 'Museo';
+	line-height:20px;
+	text-decoration:none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.header nav ul li a {
+	text-transform: uppercase;
+	padding: 0 12px;
+	display:block;
+	position:relative;
+}
+
+.header nav ul li a:hover, .header nav ul li a.active,
+.footer a:hover { color:#F69220 !important; }
+
+.header nav ul li#line {
+	border-right: 1px solid #c6c8c7;
+}
+
+.footer {
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+}
+
+.footer .line {
+	background-color: #42CACA;
+	min-height: 4px;
+	height: 4px;
+	border: 0;
+}
+
+.footer .mail {
+	text-align: center;
+	margin-top: -4px;
+}
+
+.footer .contacto, .footer .footer-redes, .footer .logos {
+	float: left;
+	overflow: hidden;
+	width: 598px;
+}
+
+.footer .logos, .tac {
+	text-align: center;
+}
+
+.footer .logos #futbolista {
+	float: left;
+}
+
+.footer .contacto, .footer .footer-redes {
+	font-size: 14px;
+}
+
+.footer .contacto {
+		width: 202px;
+}
+
+.footer .footer-redes {
+	width: 190px;
+	padding-left: 10px;
+}
+
+.hr-footer {
+	margin-top: 20px;
+	border-top-color: #008C82;
+	border-bottom-color: #5f6369;
+}
+
+.footer .contacto .div {
+	overflow: hidden;
+}
+
+.footer .contacto .icono {
+	background-image:url(../images/footer-sp.png);
+	width: 18px;
+	max-width: 18px;
+	height: 18px;
+	float: left;
+	margin: 0;
+}
+
+.footer .contacto .div .text {
+	width: 175px;
+	max-width: 175px;
+	float: left;
+	margin-left: 8px;
+}
+
+.footer .contacto .dir .icono {
+	background-position: 0 0;
+}
+
+.footer .contacto .phone .icono {
+	background-position: 0 -18px;
+}
+
+.footer .contacto .correo .icono {
+	background-position: 0 -36px;
+}
+
+.footer .foo-redes {overflow:hidden; width:auto; margin-top: 30px;}
+.footer a { color: white; }
+.footer a:hover, .footer .foo-redes a:hover { color: #42CACA; }
+.footer .foo-red {float: left; width:auto; height:auto; margin: 0 0 0 3px; text-align: center; color: white; text-transform: uppercase;}
+.footer .foo-red:hover {color: #005151;}
+.footer .foo-red div {background:url(../images/footer-sp.png); width:48px; height:48px; margin:0 auto 10px auto; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; width:48px;}
+.footer .foo-red.red-fb div {background-position:-19px 0;} .footer .foo-red.red-fb div:hover {background-position:-19px -48px;}
+.footer .foo-red.red-tw div {background-position:-67px 0;} .footer .foo-red.red-tw div:hover {background-position:-67px -48px;}
+.footer .foo-red.red-yt div {background-position:-213px 0;} .footer .foo-red.red-yt div:hover {background-position:-213px -48px;}
+
+.footer section .derechos, .footer section .cogroup { font-size: 14px; }
+.footer section .derechos { float: left; }
+.footer section .derechos span { text-transform: uppercase; color: #42CACA; font-weight: bold; }
+.footer section .cogroup { float: right; }
+
+.con-slider {box-shadow: 0px 10px 20px -10px #000; -webkit-box-shadow: 0px 10px 20px -10px #000; height:404px; position:relative; width:100%; z-index:8; margin-top: 10px;}
+.main-slider {margin:0; padding:0;}
+.main-slider .slide, .main-slider .slide img {}
+.texto {
+	position:absolute;
+	z-index:9;
+	top: 50%;
+	margin-top: -105px;
+	right: 100px;
+	text-align: center;
+	width: 410px;
+	color: #1C3434;
+	font-family: Museo;
+	text-transform: uppercase;
+}
+.texto h4, .texto h1 {margin: 0 0 10px 0;}
+.texto h2 {
+	font-size: 40px;
+	padding: 0;
+	font-weight: normal;
+}
+.texto h1 {
+	font-size: 44px;
+	font-weight: bold;
+}
+.texto a {
+	background-color: #005151;
+	color: white;
+	font-size: 24px;
+	padding: 5px 0;
+	float: left;
+	width: 100%;
+	font-weight: bold;
+}
+.con-slider .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+	outline: 0;
+	width: 64px;
+	height: 64px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+.con-slider .bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(../images/footer-sp.png) no-repeat -115px -64px;
+}
+.con-slider .bx-wrapper .bx-next {
+	right: 10px;
+	background: url(../images/footer-sp.png) no-repeat -115px 0;
+}
+.con-slider .bx-wrapper .bx-pager-item {
+	display: none;
+}
+
+.slide-jugadores {margin: 30px 0; padding:0; width: 100%;}
+.slide-jugadores li {
+	width: 302px;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	padding: 0 15px 25px;
+	border-left: 1px dashed #c6c8c7;
+	text-align: justify;
+}
+.slide-jugadores li:first-child {
+	border-left: 0;
+}
+.slide-jugadores li h2, .slide-jugadores li h5 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+.slide-jugadores li h2, .slide-jugadores li a {
+	text-align: center;
+}
+.slide-jugadores li p {
+	padding: 0;
+	font-size: 14px;
+}
+.slide-jugadores li .det-jugador, .slide-jugadores li .foto-jugador {
+	float: left;
+	margin-top: 20px;
+}
+.slide-jugadores li .det-jugador {
+	width: 155px;
+	margin-right: 12px;
+}
+.slide-jugadores li .foto-jugador {
+	width: 135px;
+}
+.slide-jugadores li a, .news a, .link, .buttons button {
+	text-align: center;
+	background-color: #005151;
+	color: white;
+	padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.slide-jugadores li a:hover, .news a:hover, .link:hover, .buttons button:hover {
+	color: #42CACA;
+}
+
+.link {
+	font-size: 14px;
+	float: right;
+}
+
+.noticias {margin-top: 20px;}
+.noticias h1, .left h1, .noticias h3, .big_div h1, .noticias h4 {
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #005151;
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #D5D5D5;
+}
+.noticias h1 {
+	font-size: 35px;
+}
+.list_news {
+	margin: 0;
+	padding-left: 0;
+}
+.list_news li {
+	list-style: none;
+	padding-left: 20px;
+}
+.list_news li span {
+	float: left;
+	margin-left: -20px;
+	margin-top: 4px;
+	min-width: 16px;
+	min-height: 16px;
+	background-image: url(../images/footer-sp.png);
+	background-position: -51px -98px;
+	background-repeat: no-repeat;
+}
+
+.con-slider2 {height:160px; position:relative; width:100%; z-index:8; margin: 0 0 20px 0;}
+.con-slider2 .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	/*margin-top: -67px;*/
+	outline: 0;
+	width: 25px;
+	height: 25px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+.con-slider2 .bx-wrapper .bx-prev {
+	left: 0;
+	background: url(../images/footer-sp.png) no-repeat -25px -98px;
+}
+.con-slider2 .bx-wrapper .bx-next {
+	right: 0;
+	background: url(../images/footer-sp.png) no-repeat -0 -98px;
+}
+.con-slider2 .bx-wrapper .bx-pager-item {
+	display: none;
+}
+.main-noticia {
+	float: left;
+	width: 48%;
+	max-width: 48%;
+	padding: 10px;
+	height: 140px;
+	font-size: 14px;
+	text-align: justify;
+}
+.main-noticia .lf { margin-left: 20px; }
+.main-noticia .rg { margin-right: 20px; }
+.main-noticia .foto-noticia, .main-noticia .det-noticia {float: left;}
+.main-noticia .foto-noticia {width: 140px; height: 140px; margin-right: 10px;}
+.main-noticia .det-noticia {width: 295px; max-height:140px;}
+.main-noticia .det-noticia h4 {margin: 0; padding: 0; font-weight: normal;}
+.main-noticia .det-noticia p {margin: 0; padding: 5px 0;}
+.main-noticia .det-noticia .fecha {margin: 5px 0 0 0; color: #C8C9C7}
+
+.left { float: left; }
+.left > *, .left > * { text-align: justify; }
+.lf_big { width: 550px; }
+.lf_med { width: 430px; }
+.lf_big2 { width: 750px ; }
+.lf_short { width: 230px; }
+.lf_mr { margin-left: 20px; }
+.lf_mr_short { margin-left: 10px; }
+.left .geolocalizacion {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	padding: 15px 0;
+	margin: 20px 0 0;
+	border-width: 1px 0;
+	border-style: dashed;
+	border-color: #c6c8c7;
+	text-align: justify;
+}
+
+.left #image_wrap {
+	/* dimensions */
+	width:540px;
+	padding: 0;
+	margin-left: 2px;
+	
+	/* centered */
+	text-align:center;
+	
+	/* some "skinning" */
+	background-color:#efefef;
+	border:2px solid #fff;
+	outline:1px solid #ddd;
+	-moz-ouline-radius:4px;
+}
+
+/*
+  root element for the scrollable.
+  when scrolling occurs this element stays still.
+  */
+.scrollable {
+
+    /* required settings */
+    position:relative;
+    overflow:hidden;
+    width: 470px;
+    height:120px;
+
+    /* custom decorations */
+    border:1px solid #ccc;
+    background:url(../images/h300.png) repeat-x;
+}
+
+/*
+   root element for scrollable items. Must be absolutely positioned
+   and it should have a extremely large width to accomodate scrollable
+   items.  it's enough that you set the width and height for the root
+   element and not for this element.
+*/
+.scrollable .items {
+    /* this cannot be too large */
+    width:20000em;
+    position:absolute;
+    clear:both;
+}
+
+.items div {
+    float:left;
+    width:480px;
+		cursor: pointer;
+}
+
+/* single scrollable item */
+.scrollable img {
+    float:left;
+    margin:20px 5px 20px 21px;
+    background-color:#fff;
+    padding:2px;
+    border:1px solid #ccc;
+    width:118px;
+    height:75px;
+
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+
+/* active item */
+.scrollable .active {
+    border:2px solid #000;
+    position:relative;
+    cursor:pointer;
+}
+
+/* this makes it possible to add next button beside scrollable */
+.scrollable {
+    float:left;
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.browse {
+    background:url(../images/hori_large.png) no-repeat;
+    display:block;
+    width:30px;
+    height:30px;
+    float:left;
+    margin:45px 5px;
+    cursor:pointer;
+    font-size:1px;
+}
+
+/* right */
+a.right { background-position: 0 -30px; clear:right; margin-right: 0px;}
+a.right:hover { background-position:-30px -30px; }
+a.right:active { background-position:-60px -30px; }
+
+
+/* left */
+a.left { margin-left: 0px; }
+a.left:hover  { background-position:-30px 0; }
+a.left:active { background-position:-60px 0; }
+
+/* up and down */
+a.up, a.down  {
+    background:url(../images/hori_large.png) no-repeat;
+    float: none;
+    margin: 10px 50px;
+}
+
+/* up */
+a.up:hover { background-position:-30px 0; }
+a.up:active { background-position:-60px 0; }
+
+/* down */
+a.down { background-position: 0 -30px; }
+a.down:hover { background-position:-30px -30px; }
+a.down:active { background-position:-60px -30px; }
+
+
+/* disabled navigational button */
+a.disabled {
+    visibility:hidden !important;
+}
+
+.menu_lateral {
+	
+}
+
+.menu_lateral li a {
+	display: block;
+	padding: 3px 0 3px 12px;
+	text-decoration:none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+}
+
+.menu_lateral li a.active, .menu_lateral li a:hover {
+	background-color: #005151;
+	color: white;
+}
+
+.mega {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+}
+
+.sub {
+	list-style: none;
+	padding-left: 15px;
+	font-size: 14px;
+}
+
+.jugadores_list .jugador {
+	display: block;
+	float: left;
+	width: 200px;
+	min-width: 200px;
+	height: 200px;
+	min-height: 200px;
+	margin: 25px;
+}
+
+.jugadores_list .jugador a {
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	min-width: 200px;
+	height: 200px;
+	min-height: 200px;
+	position: relative;
+}
+
+.jugadores_list .jugador .hover {
+	background-image: url(../images/caption-bg.png);
+	height: 0;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	left: 0;
+	color: white;
+}
+
+.jugadores_list .jugador .hover #datos {
+	margin: 0 3px 3px 3px;
+	font-size: 14px;
+}
+
+.datos-jugador {
+	margin-left: 20px;
+	width: 595px;
+}
+
+.det-dato {
+	margin-top: 20px;
+	width: 50%;
+}
+
+.scroll {
+	position:relative;
+	overflow:hidden;
+	width: 348px;
+	height: 266px;
+	float:left;
+	margin-left: 2px;
+	margin-bottom: 2px;
+}
+	
+/* root element for the scroll pics */
+.scroll .pics {
+	width:20000em;
+	position:absolute;
+	clear:both;
+}
+	
+/* single scroll item */
+.pics div {
+	float:left;
+	cursor:pointer;
+	width:400px !important;
+	height:300px;
+	margin:0px;
+}
+	
+/* possible settings for the active scroll */
+.scroll.active {
+}
+
+.news {
+	width: 323px;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.extracto {
+	font-size: 14px;
+	text-align: justify;
+}
+
+.detnews {
+	height: 290px;
+	min-height: 290px;
+	max-height: 290px;
+}
+
+.barra {
+	height: auto;
+	max-height: 500px;
+	z-index: 0;
+}
+
+.trayectoria table {
+	border: 1px solid lightgrey;
+	text-align: center;
+}
+
+table thead {
+	background-color: #8BC540;
+	color: white;
+	font-weight: normal;
+}
+table thead th {
+	text-transform: uppercase;
+	padding: 5px;
+}
+table tbody tr.clasificado {
+	background-color: #A8DCF2;
+}
+
+.trayectoria table tr:hover {
+	background-color: #42CACA;
+	cursor: pointer;
+}
+
+.pagination {
+	clear: both;
+}
+
+.pagination ul {
+	display: block;
+	list-style: none;
+	height: 30px;
+	min-height: 30px;
+	float: right;
+}
+
+.pagination ul li {
+	display: block;
+	float: left;
+	width: 30px;
+	text-align: center;
+}
+
+.pagination ul li a {
+	display: block;
+	padding: 3px;
+	border: 1px solid #005151;
+	margin: 0 2px;
+}
+
+.pagination ul li.first, .pagination ul li.last {
+	width: 60px;
+}
+
+.pagination ul li a.active, .pagination ul li a:hover {
+	background-color: #005151;
+	color: white;
+}
+
+.pagination ul li a.inactive, .pagination ul li a.inactive:hover {
+	background-color: transparent;
+	color: #C6C8C7;
+	border: 1px solid #C6C8C7;
+}
+
+label, input, textarea {
+	font-size: 18px;
+}
+
+label, input {
+	margin-top: 10px;
+	float: left;
+}
+
+textarea {
+	clear: both;
+	width: 100%;
+}
+
+input, textarea {
+	border: 1px solid #005151;
+}
+
+label {
+	width: 140px;
+	min-width: 140px;
+	padding: 3px;
+	margin-right: 5px;
+	color: #005151;
+	text-transform: capitalize;
+}
+
+.lb-input {
+	width: 210px;
+	min-width: 210px;
+}
+
+.buttons {
+	margin: 20px 0 0;
+	text-align: center;
+}
+
+.buttons button {
+	border: 0;
+}
+
+.diroffice {
+	font-size: 14px;
+}
+
+.contacto_form {
+	text-align: right;
+}
+
+.contacto_form div {
+	margin-bottom: 10px;
+}
+
+.contacto_form div .icono {
+	background-image:url(../images/contact-sp.png);
+	width: 18px;
+	height: 18px;
+	float: right;
+	margin: 0 0 0 8px;
+}
+
+.contacto_form .dir .icono {
+	background-position: 0 0;
+}
+
+.contacto_form .phone .icono {
+	background-position: 0 -18px;
+}
+
+.contacto_form .correo .icono {
+	background-position: 0 -36px;
+}
+
+.icon {min-height:32px; overflow:hidden; min-width:32px; background:url(../images/footer-sp.png); float:left; height:32px; margin:0; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; width:40px; background-repeat: no-repeat;}
+.icon.print {background-position:-180px 0;} .icon.print:hover {background-position:-180px -32px;}
+.icon.pdf {background-position:-180px -64px;} .icon.pdf:hover {background-position:-180px -96px;}
+/*─────────────────────────────────/ Site Styles*/
+

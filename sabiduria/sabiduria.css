@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Advert;
+  src: url('fuentes/Advert.eot'); /* for IE */
+  src: local('Advert.ttf'),
+    url("fuentes/Advert.otf") format("opentype"),
+    url("fuentes/Advert.ttf") format("TrueType"); /* these are for other browsers */
+}
+
+body {
+  background-color: #E0DAE4;
+  color: #722C79;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input, textarea, #button, #titulo, #encabezado, #menu_ppal {
+  font-family: Advert;
+}
+
+#load
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C6BACD;
+  z-index: 1000;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+}
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -64px;
+  margin-left: -64px;
+}
+
+#titulo {
+  color: #722C79;
+  font-size: 16px;
+}
+
+#button {
+  min-width: 151px;
+  max-width: 151px;
+  min-height: 41px;
+  max-height: 41px;
+  background-image: url(imagenes/boton_a.png);
+  background-repeat: no-repeat;
+  color: #722C79;
+  font-family: Advert;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: center;
+  cursor: pointer;
+  padding: 3px;
+}
+
+#button:hover {
+  background-image: url(imagenes/boton_b.png);
+  color: white;
+}
+
+#cuerpo {
+  width: 1000px;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  overflow: hidden;
+}
+
+#encabezado {
+  overflow: hidden;
+  font-size: 30px;
+  text-align: center
+}
+
+#main{
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+#col_izq {
+  float: left;
+  width: 222px;
+}
+
+.color_amarillo, a {
+  color: #F1CC3F;
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu_ppal {
+  min-height: 239px;
+}
+
+#menu_ppal .menu_top {
+  min-height: 25px;
+  background-image: url(imagenes/fondo_menu_top.png);
+  background-repeat: no-repeat;
+}
+
+#menu_ppal .menu_medio {
+  background-image: url(imagenes/fondo_menu_medio.png);
+  background-repeat: repeat-y;
+}
+
+#menu_ppal .menu_bottom {
+  min-height: 26px;
+  background-image: url(imagenes/fondo_menu_bottom.png);
+  background-repeat: no-repeat;
+}
+
+#menu_ppal ul {
+  list-style: none;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+}
+
+#menu_ppal ul li a {
+  margin-left: 15px;
+  color: #F1CC3F;
+  text-decoration: none;
+}
+
+#menu_ppal ul li a:hover, #menu_ppal ul li a.active, a:hover, a.active {
+  color: white;
+}
+
+#acceso_main {
+  padding-left: 15px;
+  margin-top: -2px;
+}
+
+#contenido {
+  padding: 5px;
+  background-image: url(imagenes/contenido.png);
+  min-height: 490px;
+  color: black;
+  text-align: justify;
+}
+
+.contenido {
+  float: left;
+  margin-left: 5px;
+  width: 763px;
+}
+
+#pie_pagina {
+  clear: both;
+  text-align: center;
+  background-image: url(imagenes/pie.png);
+  background-repeat: repeat-x;
+  margin-top: 10px;
+  color: white;
+}

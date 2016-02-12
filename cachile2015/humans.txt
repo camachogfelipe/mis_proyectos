@@ -1,0 +1,17 @@
+﻿/*Cuentas*/
+/* COgroupsas */
+	Líder de Desarrollo: Felipe camacho
+	Contacto: felipe@cogroupsas.com
+	
+	Maquetador: Felipe Camacho
+	Contacto: felipe@cogroupsas.com
+	
+	Desarrollador : Felipe Camacho
+	Contacto: felipe@cogroupsas.com
+
+
+/* SITE */
+	Last update:2014/01/10
+	Language: Español
+	Doctype:HTML5
+	IDE: FileZilla, Fireworks, Ilustrator
