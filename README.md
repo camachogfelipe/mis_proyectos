@@ -1,4 +1,4 @@
-# Proyecto Xpertos
+# Proyecto Personales
 
 ## Team
 
